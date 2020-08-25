@@ -1,0 +1,18 @@
+config:
+  target: 'http://127.0.0.1:8200'
+  phases:
+    - duration: 60
+      arrivalRate: 20
+  defaults:
+    headers:
+      X-Vault-Token: 's.yrNLuAsqPRW6TLUOmtJIjQ4O.PyCPX'
+      X-Vault-Namespace: 'acmeco/dev/robocop'
+scenarios:
+  - flow:
+    - loop: 
+      - post:
+          url: "/v1/pki/issue/rsa_client_only"
+          json:
+            common_name: "www.testing-cert.com"
+            ttl: "120"
+      count: 10

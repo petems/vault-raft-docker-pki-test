@@ -1,0 +1,7 @@
+terraform/.terraform/*
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+vault-agent/baz.txt
+vault-agent/role_id.txt
+vault-agent/secret_id.txt
+vault-agent/sink-file
